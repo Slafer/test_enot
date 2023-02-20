@@ -1,0 +1,17 @@
+Для работы сайта требуется наличие БД test_enot на MySQL (данные для подключения можно изменить в файле inc/db.php)
+hostname = 'localhost'
+user = 'root'
+password = ''
+
+с таблицами 
+	users
+id serial primary key
+login varchar
+pass varchar
+	currencies
+abbr varchar primary key
+name varchar
+rate double
+
+Обновление курса валют реализовано через кнопку в ЛК, которая вызывает срабатывание скрипта update_data.php
+Для обновления курса валют каждые 3 часа можно вызывать этот скрипт по расписанию через средства ОС Windows/Linux
